@@ -1,5 +1,5 @@
 {
-  "name": "spotify-them-for-slack",
+  "name": "spotify-based-slack-theme",
   "version": "0.0.1",
   "scripts": {},
   "devDependencies": {
@@ -7,5 +7,24 @@
     "gulp": "^3.9.1",
     "gulp-append-prepend": "^1.0.4",
     "gulp-rename": "^1.2.2"
-  }
+  },
+  "description": "Spotify based dark theme for Slack ",
+  "main": "spotify-theme.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dougiefresh49/spotify-based-slack-theme.git"
+  },
+  "keywords": [
+    "slack",
+    "theme",
+    "slack",
+    "dark",
+    "theme"
+  ],
+  "author": "dougiefresh49",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dougiefresh49/spotify-based-slack-theme/issues"
+  },
+  "homepage": "https://github.com/dougiefresh49/spotify-based-slack-theme#readme"
 }
