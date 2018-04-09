@@ -15,7 +15,6 @@ TODO:
     -- everything
   - Channel Activity
     -- user handles color (uses --text :/)
-    -- channel name colors (starting with hashtags)
     -- member link boarder
     -- your name circle color
   - messages in channel
@@ -303,6 +302,10 @@ ts-jumper input[type="text"],
 
 #member_mentions .day_divider {
   color: var(--color-secondary);
+}
+
+#member_mentions h3 a.channel_link {
+  color: var(--color-primary);
 }
 
 .mention_day_container_div .day_divider:before {
@@ -872,10 +875,6 @@ span.match {
 .mention_rxn .mention_rxn_summary .member_preview_link,
 .mention_rxn .mention_rxn_summary .mention_rxn_summary_members {
   color: var(--text);
-}
-
-#member_mentions h3 a {
-  color: var(--text-special);
 }
 
 pre.special_formatting {
