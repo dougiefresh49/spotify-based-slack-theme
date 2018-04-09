@@ -1,0 +1,11 @@
+{
+  "name": "spotify-them-for-slack",
+  "version": "0.0.1",
+  "scripts": {},
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-append-prepend": "^1.0.4",
+    "gulp-rename": "^1.2.2"
+  }
+}
