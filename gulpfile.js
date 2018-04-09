@@ -4,7 +4,7 @@ let gulpRename = require('gulp-rename');
 let gulpPrepend = require('gulp-append-prepend');
 
 /* Change these as needed */
-const themeFileSrc = './slack.css';
+const themeFileSrc = './spotify-theme.css';
 const slackFileName = 'lato-2-compressed-mac.css';
 const slackDestinationPath = './a.slack-edge.com/d5819/style/libs/';
 const slackFonts = getSlackFonts();
