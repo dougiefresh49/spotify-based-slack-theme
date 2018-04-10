@@ -15,7 +15,6 @@ TODO:
     -- everything
   - messages in channel
     -- code snippets
-    -- reactions
     -- welcome banner
       --- .c-message--ephemeral (change background)
       --- .c-message__label (change color)
@@ -24,7 +23,7 @@ TODO:
     -- start a thread
   - thread pane (right)
     -- everything
-  - main menu dropdown
+  @ - main menu dropdown
     -- set a status menu
     -- "open in the slack app" section
   - channel (@channel header bottom)
@@ -581,6 +580,8 @@ span.match {
 .btn.dialog_go {
   background: var(--color-accent);
   color: var(--color-primary);
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
 }
 
 .btn.dialog_cancel {
@@ -588,8 +589,6 @@ span.match {
   color: var(--color-primary) !important;
   border: 1px solid var(--color-secondary);
   text-shadow: none !important;
-  padding-left: 40px;
-  padding-right: 40px;
 }
 
 .btn.dialog_cancel:hover {
@@ -839,6 +838,23 @@ ts-message .action_hover_container .btn_msg_action,
   color: var(--color-primary);
   border-color: none;
 }
+
+.btn.btn_success {
+  background: var(--color-accent);
+  border-radius: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 1px solid var(--color-accent);
+}
+
+.btn_outline.hover,
+.btn_outline:focus,
+.btn_outline:hover {
+  color: var(--color-accent) !important;
+  background: var(--background-elevated);
+}
+
+/* ?? is this needed ?? */
 
 .btn:hover:after {
   border-color: var(--border-bright);
@@ -1126,7 +1142,7 @@ ts-mention.ts_tip:hover {
   border: none;
 }
 
-/* menus */
+/* Menus */
 
 .menu ul li a,
 .menu ul li:not(.disabled) a {
@@ -1143,7 +1159,6 @@ ts-mention.ts_tip:hover {
 .menu .section_header .header_label {
   color: var(--color-bold) !important;
   background-color: var(--color-light) !important;
-  /* fix janky black border */
 }
 
 .menu .section_header hr {
@@ -1153,6 +1168,34 @@ ts-mention.ts_tip:hover {
 .menu.submenu {
   background: var(--color-light) !important;
   margin-left: -.5rem;
+}
+
+/* Main Menu */
+
+.slack_menu_download.slack_menu_section {
+  background: var(--color-light);
+  border-color: var(--color-light);
+}
+
+.current_status_input_wrap .status_clear_icon_wrap.hidden~.current_status_input {
+  background: var(--color-light);
+  border: 1px solid var(--color-secondary);
+}
+
+.ql-container.texty_single_line_input {
+  background-color: var(--color-light);
+  color: var(--color-secondary);
+}
+
+.current_status_cancel_button {
+  border-radius: 50px;
+  border: 1px solid var(--color-primary);
+  background: var(--color-light);
+  color: var(--color-primary) !important;
+}
+
+.current_status_cancel_button:after {
+  border: none;
 }
 
 /* threads */
