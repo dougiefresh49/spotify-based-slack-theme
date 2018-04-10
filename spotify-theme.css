@@ -13,10 +13,6 @@ green: rgb(33, 176, 66)
 TODO: 
   - Workspace Directory pane(right)
     -- everything
-  - Channel Activity
-    -- user handles color (uses --text :/)
-    -- member link boarder
-    -- your name circle color
   - messages in channel
     -- code snippets
     -- reactions
@@ -342,6 +338,23 @@ ts-jumper input[type="text"],
 #mentions_scroller {
   background: var(--background-elevated) !important;
   color: var(--color-primary) !important;
+}
+
+.mention_rxn .mention_rxn_summary .app_preview_link,
+.mention_rxn .mention_rxn_summary .member_preview_link,
+.mention_rxn .mention_rxn_summary .mention_rxn_summary_members {
+  color: var(--color-primary);
+}
+
+.feature_name_tagging_client ts-message .mention,
+ts-message .mention,
+span.match {
+  border: 1px solid var(--color-accent) !important;
+  background-color: var(--background) !important;
+  font-weight: bold;
+  padding: 2px 4px;
+  margin: 2px;
+  border-radius: 10px;
 }
 
 /* Message Dividers */
@@ -855,31 +868,9 @@ ts-message .action_hover_container .btn_msg_action,
   border-color: var(--background-elevated);
 }
 
-.feature_name_tagging_client ts-message .mention,
-ts-message .mention,
-span.match {
-  border: 1px solid var(--border-bright) !important;
-  background-color: var(--background-elevated) !important;
-  font-weight: bold;
-  padding: 2px 4px;
-  margin: 2px;
-  border-radius: 10px;
-}
-
-.mention>.mention {
-  /* I'm assuming this is a Slack bug */
-  border: none;
-}
-
 .mention_rxn {
   border-radius: 5px;
   margin: 1px 5px;
-}
-
-.mention_rxn .mention_rxn_summary .app_preview_link,
-.mention_rxn .mention_rxn_summary .member_preview_link,
-.mention_rxn .mention_rxn_summary .mention_rxn_summary_members {
-  color: var(--text);
 }
 
 pre.special_formatting {
@@ -1036,9 +1027,9 @@ ts-message a.timestamp {
 .internal_member_link.ts_tip,
 .internal_user_group_link.ts_tip,
 ts-mention.ts_tip {
-  color: var(--text-bright);
-  background: var(--background-elevated);
-  border: 1px solid var(--border-dim);
+  color: var(--color-primary);
+  background: var(--background);
+  border: 1px solid var(--color-secondary);
   padding: 2px 4px;
   margin: 2px;
   border-radius: 10px;
@@ -1048,8 +1039,8 @@ ts-mention.ts_tip {
 .internal_member_link.ts_tip:hover,
 .internal_user_group_link.ts_tip:hover,
 ts-mention.ts_tip:hover {
-  color: var(--text-bright) !important;
-  border: 1px solid var(--border-bright);
+  color: var(--color-bold) !important;
+  border: 1px solid var(--color-bold);
 }
 
 /* emojis */
