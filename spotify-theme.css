@@ -19,13 +19,6 @@ TODO:
       --- .c-message--ephemeral (change background)
       --- .c-message__label (change color)
       --- .c-message__content (change color)
-  - message actions
-    -- start a thread
-  - thread pane (right)
-    -- everything
-  @ - main menu dropdown
-    -- set a status menu
-    -- "open in the slack app" section
   - channel (@channel header bottom)
     -- date pill, put z indez above the boarder at the top but below header
   - rename vars better
@@ -306,11 +299,13 @@ ts-jumper input[type="text"],
   background-color: var(--background-elevated);
 }
 
+.c-message_list__unread_divider__label,
 #convo_container .convo_flexpane_divider .reply_count {
-  color: var(--color-primary) !important;
-  background-color: var(--background-elevated) !important;
-  border: 1px solid var(--color-secondary) !important;
+  color: var(--color-accent) !important;
+  background-color: var(--color-primary) !important;
+  border: 1px solid var(--color-primary) !important;
   border-radius: 1rem;
+  font-weight: 700;
 }
 
 .day_divider .day_divider_label {
@@ -354,6 +349,39 @@ span.match {
   border-radius: 10px;
 }
 
+/* Channel Thread Popout */
+
+#convo_container ts-conversation ts-message.selected {
+  background: var(--background);
+}
+
+#convo_container ts-conversation ts-message.selected:hover,
+#convo_container ts-conversation ts-message.selected:focus,
+#convo_container ts-conversation ts-message.selected:active {
+  background: var(--highlight);
+}
+
+ts-message .message_body {
+  color: var(--color-secondary);
+}
+
+#convo_tab .message_input,
+#convo_tab textarea#msg_text {
+  color: var(--color-secondary) !important;
+}
+
+.inline_message_input_container .ql-container.focus,
+.inline_message_input_container .ql-container:active {
+  border-color: var(--color-secondary) !important;
+}
+
+#file_reply_container .reply_container_info .reply_broadcast_buttons_container .reply_broadcast_label_container,
+#reply_container .reply_container_info .reply_broadcast_buttons_container .reply_broadcast_label_container,
+.reply_input_container .reply_container_info .reply_broadcast_buttons_container .reply_broadcast_label_container,
+#convo_tab #convo_tab_header {
+  color: var(--color-primary) !important;
+}
+
 /* Message Dividers */
 
 .c-message_list__day_divider__line,
@@ -369,11 +397,6 @@ span.match {
 .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider:before {
   border-bottom: 1px solid var(--color-secondary) !important;
   background: var(--background-light) !important;
-}
-
-.c-message_list__unread_divider__label {
-  color: var(--color-accent);
-  background: var(--color-primary);
 }
 
 .channel_header_icon:hover {
@@ -474,7 +497,8 @@ span.match {
 .c-reaction:hover,
 .c-reaction:focus,
 .c-reaction--reacted,
-.rxn.user_reacted {
+.rxn.user_reacted,
+.rxn:hover {
   border-color: var(--color-accent) !important;
   color: var(--color-primary);
 }
@@ -600,11 +624,11 @@ span.match {
   border-radius: 50px;
 }
 
-.modal-footer .btn_outline:after,
-.modal-footer .btn:hover:after,
-.modal-footer .btn.hover:after,
-.modal-footer .btn:focus:after,
-.modal-footer .btn:hover:after {
+.btn_outline:after,
+.btn:hover:after,
+.btn.hover:after,
+.btn:focus:after,
+.btn:hover:after {
   border: none;
   box-shadow: none;
 }
@@ -769,13 +793,13 @@ input[type="text"]:focus,
 }
 
 ts-message {
-  border-radius: 5px;
-  margin: 1px 5px !important;
-  box-shadow: none !important;
+  /* border-radius: 5px; */
+  /* margin: 1px 5px !important; */
+  /* box-shadow: none !important; */
 }
 
 ts-message:hover {
-  background: var(--background-hover) !important;
+  background: var(--highlight) !important;
 }
 
 #messages_container::after {
@@ -839,9 +863,11 @@ ts-message .action_hover_container .btn_msg_action,
   border-color: none;
 }
 
+.btn.reply_send,
 .btn.btn_success {
   background: var(--color-accent);
-  border-radius: 50px;
+  color: var(--color-primary) !important;
+  border-radius: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
   border: 1px solid var(--color-accent);
@@ -849,7 +875,7 @@ ts-message .action_hover_container .btn_msg_action,
 
 .btn_outline.hover,
 .btn_outline:focus,
-.btn_outline:hover {
+.btn_outline:hover:not(.btn.reply_send.btn_outline:hover) {
   color: var(--color-accent) !important;
   background: var(--background-elevated);
 }
@@ -1167,7 +1193,6 @@ ts-mention.ts_tip:hover {
 
 .menu.submenu {
   background: var(--color-light) !important;
-  margin-left: -.5rem;
 }
 
 /* Main Menu */
@@ -1203,25 +1228,6 @@ ts-mention.ts_tip:hover {
 ts-message .reply_bar:hover {
   background: var(--background) !important;
   border: 1px solid var(--border-dim) !important;
-}
-
-/* editor in thread reply */
-
-#convo_tab .message_input,
-#convo_tab textarea#msg_text {
-  color: var(--text) !important;
-}
-
-.inline_message_input_container .ql-container.focus,
-.inline_message_input_container .ql-container:active {
-  border-color: var(--border-dim) !important;
-}
-
-#file_reply_container .reply_container_info .reply_broadcast_buttons_container .reply_broadcast_label_container,
-#reply_container .reply_container_info .reply_broadcast_buttons_container .reply_broadcast_label_container,
-.reply_input_container .reply_container_info .reply_broadcast_buttons_container .reply_broadcast_label_container,
-#convo_tab #convo_tab_header {
-  color: var(--text) !important;
 }
 
 /* other */
