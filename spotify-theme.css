@@ -442,6 +442,11 @@ ts-jumper input[type="text"],
   background-color: transparent;
 }
 
+.c-message_attachment__pretext {
+  color: var(--color-secondary);
+  margin-bottom: 13px
+}
+
 /* Channel Message Actions */
 
 .c-message_actions__container {
