@@ -22,8 +22,6 @@ TODO:
       --- .c-message__content (change color)
   - message actions
     -- start a thread
-  - new messages
-    -- attachment menu
   - thread pane (right)
     -- everything
   - main menu dropdown
@@ -1125,12 +1123,18 @@ ts-mention.ts_tip:hover {
 }
 
 .menu .section_header .header_label {
-  color: var(--text) !important;
-  background-color: var(--background-elevated) !important;
+  color: var(--color-bold) !important;
+  background-color: var(--color-light) !important;
+  /* fix janky black border */
 }
 
 .menu .section_header hr {
   border-color: transparent;
+}
+
+.menu.submenu {
+  background: var(--color-light) !important;
+  margin-left: -.5rem;
 }
 
 /* threads */
