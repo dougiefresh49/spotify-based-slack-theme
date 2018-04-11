@@ -402,6 +402,10 @@ ts-message .message_body {
   color: var(--color-primary);
 }
 
+#client-ui .searchable_member_list .team_list_item:hover {
+  background: var(--highlight);
+}
+
 /* User Group Popout */
 
 #user_group_filter {
