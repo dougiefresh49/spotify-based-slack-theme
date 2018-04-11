@@ -10,9 +10,7 @@ green: rgb(33, 176, 66)
 **/
 
 /* 
-TODO: 
-  - keyboard shortcuts
-    -- scrollbar background color
+TODO:
   - highlight message at top
     -- background color
     -- text color
@@ -935,6 +933,10 @@ div::-webkit-scrollbar-thumb,
   color: inherit !important;
 }
 
+#unread_msgs_scroller_div::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
 .p-emoji_picker__list_scroller::-webkit-scrollbar-track {
   box-shadow: none;
   color: var(--color-secondary) !important;
@@ -1556,7 +1558,7 @@ ts-thread .view_all_replies_container:hover {
   color: var(--text);
 }
 
-/* unreads */
+/* All Unreads Thread */
 
 .unread_empty_state {
   color: var(--text);
@@ -1569,22 +1571,73 @@ ts-thread .view_all_replies_container:hover {
 .sli_briefing_view__footer_title,
 .bottom_mark_all_read {
   background-color: var(--background);
-  color: var(--text);
-  border-color: var(--border-dim);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
 }
 
-.unread_group_header button {
-  color: var(--text-special);
+.sli_briefing_preview,
+.sli_briefing_preview_container::after,
+.sli_briefing_preview_container::before {
+  background-color: var(--color-light);
+  border: 1px solid var(--color-primary);
 }
 
-/* scroller for threads & unreads */
-
-#threads_msgs_scroller_div:not(.loading):before {
-  background: var(--background);
+.sli_briefing_preview__title {
+  color: var(--color-primary);
 }
 
-#threads_msgs_scroller_div:not(.loading):before {
-  background: none;
+.unread_group_header_name a {
+  color: var(--color-primary);
+}
+
+.sli_briefing_preview__description_text {
+  color: var(--color-secondary);
+}
+
+.sli_briefing_preview__description_text b {
+  color: var(--color-accent);
+}
+
+.collapsed .unread_group_header .ts_icon_caret_right,
+.unread_group_header .unread_group_collapse_toggle:hover ts-icon {
+  color: var(--color-accent);
+}
+
+.btn.sli_briefing_preview__action {
+  border-radius: 50px;
+  background: transparent;
+  color: var(--color-secondary) !important;
+  border: 1px solid var(--color-secondary);
+}
+
+.btn.sli_briefing_preview__action:hover {
+  color: var(--color-bold) !important;
+  border: 1px solid var(--color-bold);
+}
+
+.btn.bottom_mark_all_read_btn,
+.btn.unread_group_mark {
+  border-radius: 50px;
+  background: var(--color-accent);
+  color: var(--color-primary) !important;
+}
+
+.btn.bottom_mark_all_read_btn:hover,
+.btn.unread_group_mark:hover {
+  color: var(--color-bold) !important;
+  border: 1px solid var(--color-accent);
+}
+
+.unread_group_header .unread_group_collapse_caret .ts_icon_caret_down {
+  color: var(--color-primary);
+}
+
+.unread_group_collapse_toggle:hover {
+  color: var(--color-accent) !important;
+}
+
+.unread_group_new {
+  color: var(--color-accent);
 }
 
 /* global (left sidebar) */
