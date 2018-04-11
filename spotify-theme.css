@@ -11,6 +11,22 @@ green: rgb(33, 176, 66)
 
 /* 
 TODO: 
+  - keyboard shortcuts
+    -- scrollbar background color
+  - highlight message at top
+    -- background color
+    -- text color
+    -- title color
+    -- button background and color
+    -- button hover
+  - mark as read button
+    -- background
+    -- color
+    -- hover
+  - mark all messages as read
+    -- background
+    -- color
+    -- hover
   - messages in channel
     -- code snippets
     -- welcome banner
@@ -435,6 +451,62 @@ ts-message .message_body {
 
 #flex_contents .user_group_item p {
   color: var(--color-accent);
+}
+
+/* Keyboard Shortcuts Popout */
+
+.p-flexpane_header {
+  background: var(--background-elevated);
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.p-shortcuts_flexpane__sub_heading {
+  color: var(--color-secondary);
+}
+
+.p-shortcuts_flexpane__title {
+  color: var(--color-primary);
+  padding-left: 16px;
+}
+
+.p-shortcuts_flexpane__shortcut:last-of-type,
+.p-shortcuts_flexpane__shortcut {
+  border-color: transparent;
+  padding: 0 16px;
+  color: var(--color-secondary);
+}
+
+.p-shortcuts_flexpane__shortcut:hover {
+  background: var(--highlight);
+  color: var(--color-primary);
+}
+
+.p-shortcuts_flexpane__shortcut_title {
+  color: var(--color-secondary);
+}
+
+.p-shortcuts_flexpane__section_container {
+  border-bottom: 1px solid var(--color-secondary);
+  padding-bottom: 16px;
+  margin: 16px 0 32px;
+}
+
+.p-shortcuts_flexpane__shortcut_hoverable .p-shortcuts_flexpane__shortcut_title {
+  color: var(--color-accent);
+}
+
+.p-flexpane_header__close:hover {
+  color: var(--color-primary);
+}
+
+.c-scrollbar--monkey .c-scrollbar__track {
+  background: transparent;
+  border-color: transparent;
+}
+
+.c-scrollbar--monkey .c-scrollbar__bar {
+  box-shadow: 0 3px 0 var(--color-secondary), 0 -3px 0 var(--color-secondary);
 }
 
 /* Help Modal */
@@ -865,7 +937,7 @@ div::-webkit-scrollbar-thumb,
 
 .p-emoji_picker__list_scroller::-webkit-scrollbar-track {
   box-shadow: none;
-  color: var(--color-light) !important;
+  color: var(--color-secondary) !important;
   background: none !important;
 }
 
