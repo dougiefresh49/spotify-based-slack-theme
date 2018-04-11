@@ -11,8 +11,6 @@ green: rgb(33, 176, 66)
 
 /* 
 TODO: 
-  - Workspace Directory pane(right)
-    -- everything
   - messages in channel
     -- code snippets
     -- welcome banner
@@ -382,6 +380,22 @@ ts-message .message_body {
   color: var(--color-primary) !important;
 }
 
+/* Workspace Directory Popout */
+
+#client-ui #team_list_container .searchable_member_list_search,
+#client-ui .searchable_member_list .team_list_item {
+  border-bottom: none;
+}
+
+.searchable_member_list_filter {
+  border-color: var(--color-secondary);
+}
+
+.searchable_member_list_filter .faux_input {
+  border-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
 /* Message Dividers */
 
 .c-message_list__day_divider__line,
@@ -578,7 +592,7 @@ ts-message .message_body {
   background: transparent;
 }
 
-/* Pop out Pannel */
+/* Stared Popout */
 
 #stars_scroller {
   border-right: none;
@@ -725,6 +739,15 @@ div::-webkit-scrollbar-thumb,
   color: transparent !important;
   border: 1px solid var(--color-secondary) !important;
   background-color: var(--color-secondary) !important;
+}
+
+.supports_custom_scrollbar:not(.slim_scrollbar) .flex_content_scroller::-webkit-scrollbar-track {
+  background: none;
+}
+
+.supports_custom_scrollbar:not(.slim_scrollbar) .flex_content_scroller::-webkit-scrollbar-thumb,
+.supports_custom_scrollbar:not(.slim_scrollbar) .flex_content_scroller::-webkit-scrollbar-track {
+  color: transparent;
 }
 
 #channels_scroller.show_which_channel_is_active[class] li.active .presence.active i.presence_icon,
