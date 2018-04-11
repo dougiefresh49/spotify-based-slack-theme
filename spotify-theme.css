@@ -11,8 +11,6 @@ green: rgb(33, 176, 66)
 
 /* 
 TODO: 
-  - user group popout
-    -- 
   - messages in channel
     -- code snippets
     -- welcome banner
@@ -439,6 +437,71 @@ ts-message .message_body {
   color: var(--color-accent);
 }
 
+/* Help Modal */
+
+#fs_modal_header {
+  background: var(--background);
+  border-bottom: none;
+}
+
+#fs_modal.fs_modal_header .fs_modal_btn:hover {
+  color: var(--color-primary);
+}
+
+#fs_modal.help_modal {
+  background: var(--background);
+}
+
+#help_modal_header {
+  background: var(--background) !important;
+  border: 1px solid var(--color-secondary) !important;
+  border-radius: 50px !important;
+  padding: 6px 12px !important;
+  color: var(--color-secondary);
+}
+
+#help_modal_header:hover {
+  padding: 8px 14px !important;
+  border: 2px solid var(--color-bold) !important;
+  color: var(--color-bold);
+}
+
+#fs_modal.help_modal .help_modal_header a {
+  color: inherit !important;
+}
+
+#fs_modal.help_modal .help_modal_header a:hover {
+  text-decoration: none;
+  color: var(--color-bold) !important;
+  /* line-height:  */
+}
+
+#fs_modal.help_modal #help_modal_list_container:not(.keyboard_active).not_scrolling .help_modal_article_row:hover,
+#fs_modal.help_modal .help_modal_article_row.highlighted {
+  background-color: var(--highlight-menu);
+  border-color: var(--highlight-menu);
+  color: var(--color-bold);
+}
+
+#fs_modal.help_modal #help_modal_container a.see_all,
+#fs_modal.help_modal .help_modal_article_row .channel_browser_open {
+  color: var(--color-accent);
+}
+
+.monkey_scroll_bar {
+  background: var(--color-light);
+}
+
+.monkey_scroll_handle_inner {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.close_flexpane:focus,
+.close_flexpane:hover {
+  color: var(--color-primary);
+}
+
 /* Message Dividers */
 
 .c-message_list__day_divider__line,
@@ -663,6 +726,7 @@ ts-message .message_body {
   color: var(--color-primary);
   padding-right: 1.25rem;
   padding-left: 1.25rem;
+  border-radius: 50px;
 }
 
 .btn.dialog_cancel {
@@ -1378,7 +1442,7 @@ ts-thread .view_all_replies_container:hover {
 .modal h3,
 .modal h4,
 .modal h5 {
-  color: var(--text);
+  color: var(--color-secondary);
 }
 
 #fs_modal .fs_modal_file_viewer_header {
