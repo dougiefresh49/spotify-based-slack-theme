@@ -11,6 +11,8 @@ green: rgb(33, 176, 66)
 
 /* 
 TODO: 
+  - user group popout
+    -- 
   - messages in channel
     -- code snippets
     -- welcome banner
@@ -382,7 +384,11 @@ ts-message .message_body {
 
 /* Workspace Directory Popout */
 
-#client-ui #team_list_container .searchable_member_list_search,
+#client-ui #team_list_container .searchable_member_list_search {
+  border-bottom: none;
+  margin: 1rem;
+}
+
 #client-ui .searchable_member_list .team_list_item {
   border-bottom: none;
 }
@@ -394,6 +400,39 @@ ts-message .message_body {
 .searchable_member_list_filter .faux_input {
   border-color: var(--color-secondary);
   color: var(--color-primary);
+}
+
+/* User Group Popout */
+
+#user_group_filter {
+  margin: 1rem !important;
+}
+
+#user_group_filter .member_filter {
+  padding: .7rem .75rem .7rem 2.4rem !important;
+  line-height: normal;
+  height: auto !important;
+}
+
+#client-ui .icon_search {
+  top: .8rem;
+  left: .9rem;
+}
+
+.user_group_item {
+  border-bottom: 1px solid var(--background-elevated);
+}
+
+.user_group_item:hover {
+  background-color: var(--highlight) !important;
+}
+
+#flex_contents .user_group_item:hover h4 {
+  color: var(--color-bold);
+}
+
+#flex_contents .user_group_item p {
+  color: var(--color-accent);
 }
 
 /* Message Dividers */
@@ -1023,7 +1062,7 @@ ts-message a.timestamp {
 
 .tab_container .file_list_item:focus,
 .tab_container .file_list_item:hover {
-  background-color: var(--background-hover);
+  background-color: var(--highlight);
 }
 
 /* files */
