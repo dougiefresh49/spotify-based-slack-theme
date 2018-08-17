@@ -1,12 +1,17 @@
 {
   "name": "spotify-based-slack-theme",
   "version": "0.0.1",
-  "scripts": {},
+  "scripts": {
+    "commitmsg": "commitlint -E GIT_PARAMS"
+  },
   "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-angular": "^7.0.1",
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-append-prepend": "^1.0.4",
-    "gulp-rename": "^1.2.2"
+    "gulp-rename": "^1.2.2",
+    "husky": "^0.14.3"
   },
   "description": "Spotify based dark theme for Slack ",
   "main": "spotify-theme.css",
