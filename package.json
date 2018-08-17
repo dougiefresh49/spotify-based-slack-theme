@@ -31,5 +31,6 @@
   "bugs": {
     "url": "https://github.com/dougiefresh49/spotify-based-slack-theme/issues"
   },
-  "homepage": "https://github.com/dougiefresh49/spotify-based-slack-theme#readme"
+  "homepage": "https://github.com/dougiefresh49/spotify-based-slack-theme#readme",
+  "dependencies": {}
 }
