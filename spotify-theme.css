@@ -63,6 +63,8 @@ TODO - (low priority):
   --background-elevated: rgb(15, 15, 15);
   --background-pinned: rgba(40, 40, 40, .5);
   --color-primary: rgb(250, 250, 250);
+  --color-primary-faded: rgb(250, 250, 250, .2);
+  --color-primary-faded-less: rgb(250, 250, 250, .5);
   --color-secondary: rgb(164, 164, 164);
   --color-bold: rgb(255, 255, 255);
   --color-dark: rgb(0, 0, 0);
@@ -225,7 +227,7 @@ ts-jumper input[type="text"],
 #col_messages,
 #footer {
   box-shadow: none !important;
-  background-color: var(--background)
+  background-color: var(--background-light) !important;
 }
 
 .channel_header {
@@ -238,8 +240,9 @@ ts-jumper input[type="text"],
 #client_body::before,
 #client_body:not(.onboarding):before {
   border-bottom: 1px solid var(--color-secondary) !important;
-  background: var(--background-light);
-  box-shadow: none;
+  background: var(--background-light) !important;
+  box-shadow: none !important;
+  z-index: 0 !important;
 }
 
 /* Channel Header "More" Dropdown */
@@ -574,6 +577,10 @@ ts-message .message_body {
 
 /* Message Dividers */
 
+.c-message_list__day_divider {
+  background: var(--background-light);
+}
+
 .c-message_list__day_divider__line,
 .c-message_list__unread_divider__separator {
   border-color: var(--color-secondary);
@@ -612,6 +619,40 @@ ts-message .message_body {
 
 /* Channel Messages */
 
+.c-message {
+  background: var(--background-light);
+}
+
+.c-message--last {
+  background: var(--background-light);
+  margin-bottom: 0;
+  padding-bottom: 22px;
+}
+
+.c-message__body {
+  color: var(--color-secondary);
+}
+
+.c-message a {
+  color: var(--color-bold);
+  font-weight: 600;
+}
+
+.c-message .c-member_slug--link {
+  background-color: var(--color-primary-faded);
+}
+
+.c-message .c-member_slug--link:hover {
+  background-color: var(--color-primary-faded-less);
+  color: var(--color-bold);
+  font-weight: 600;
+}
+
+.c-message .c-mrkdwn__broadcast {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
 .c-message:hover,
 .c-message--hover {
   background-color: var(--highlight) !important;
@@ -623,10 +664,6 @@ ts-message .message_body {
 
 .c-timestamp__label {
   opacity: 0.7;
-  color: var(--color-secondary);
-}
-
-.c-message__body {
   color: var(--color-secondary);
 }
 
@@ -964,7 +1001,7 @@ ts-jumper input[type="text"]::-webkit-input-placeholder {
 
 #msg_input,
 #primary_file_button {
-  background: transparent !important;
+  background-color: var(--background);
   color: var(--text) !important;
   border-color: var(--border-dim) !important;
 }
