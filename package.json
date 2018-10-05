@@ -3,13 +3,10 @@
   "version": "0.0.3",
   "scripts": {},
   "devDependencies": {
-    "@commitlint/cli": "^7.0.0",
-    "@commitlint/config-angular": "^7.0.1",
-    "@commitlint/prompt-cli": "^7.0.0",
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-append-prepend": "^1.0.4",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "^1.4.0",
     "husky": "^0.14.3",
     "run-sequence": "^2.2.1"
   },
