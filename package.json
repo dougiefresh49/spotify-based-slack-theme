@@ -1,24 +1,15 @@
 {
   "name": "spotify-based-slack-theme",
   "version": "0.0.3",
-  "scripts": {
-    "release": "gulp release",
-    "commit": "commit",
-    "commitmsg": "commitlint -E GIT_PARAMS"
-  },
+  "scripts": {},
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-angular": "^7.0.1",
     "@commitlint/prompt-cli": "^7.0.0",
-    "conventional-github-releaser": "^3.1.2",
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-append-prepend": "^1.0.4",
-    "gulp-bump": "^3.1.1",
-    "gulp-conventional-changelog": "^2.0.1",
-    "gulp-git": "^2.8.0",
     "gulp-rename": "^1.2.2",
-    "gulplog": "^1.0.0",
     "husky": "^0.14.3",
     "run-sequence": "^2.2.1"
   },
