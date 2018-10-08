@@ -213,6 +213,11 @@ ts-jumper input[type="text"],
   background: var(--background-light);
 }
 
+#channel_topic_text a {
+  color: var(--color-bold);
+  font-weight: 600;
+}
+
 #edit_topic_trigger {
   color: var(--color-accent);
 }
